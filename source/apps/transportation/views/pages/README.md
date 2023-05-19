@@ -1,2 +1,2 @@
-# Package 📦 apps.myname.views.pages
+# Package 📦 apps.transportation.views.pages
 
