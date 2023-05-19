@@ -8,11 +8,11 @@ module apps.transportation.views.index;
 import apps.transportation;
 @safe:
 
-class DMYNAMEIndexView : DView {
-  mixin(ViewThis!("MYNAMEIndexView"));
+class DTRPIndexView : DView {
+  mixin(ViewThis!("TRPIndexView"));
 
   override DH5Obj[] toH5(STRINGAA options = null) {
-    debugMethodCall(moduleName!DMYNAMEIndexView~":DMYNAMEIndexView("~this.name~")::toH5");
+    debugMethodCall(moduleName!DTRPIndexView~":DTRPIndexView("~this.name~")::toH5");
     super.toH5(options);
 
     return [
@@ -20,4 +20,4 @@ class DMYNAMEIndexView : DView {
     ].toH5;
   }
 }
-mixin(ViewCalls!("MYNAMEIndexView"));
+mixin(ViewCalls!("TRPIndexView"));

@@ -8,14 +8,14 @@ module apps.transportation.controllers.pages.error;
 import apps.transportation;
 @safe:
 
-class DMYNAMEErrorPageController : DAPPPageController {
-  mixin(ControllerThis!("MYNAMEErrorPageController"));
+class DTRPErrorPageController : DAPPPageController {
+  mixin(ControllerThis!("TRPErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .view(MYNAMEErrorView(this));
+      .view(TRPErrorView(this));
   }
 }
-mixin(ControllerCalls!("MYNAMEErrorPageController"));
+mixin(ControllerCalls!("TRPErrorPageController"));
