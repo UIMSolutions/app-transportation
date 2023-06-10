@@ -8,7 +8,7 @@ module apps.transportation.controllers.pages.error;
 import apps.transportation;
 @safe:
 
-class DTRPErrorPageController : DAPPPageController {
+class DTRPErrorPageController : DPageController {
   mixin(ControllerThis!("TRPErrorPageController"));
 
   override void initialize(Json configSettings = Json(null)) {

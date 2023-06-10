@@ -8,7 +8,7 @@ module apps.transportation.controllers.pages.index;
 import apps.transportation;
 @safe:
 
-class DTRPIndexPageController : DAPPPageController {
+class DTRPIndexPageController : DPageController {
   mixin(ControllerThis!("TRPIndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
