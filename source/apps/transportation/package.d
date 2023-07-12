@@ -15,9 +15,11 @@ public { // admin-transportation libraries
 
 static this() {
   AppRegistry.register("apps.transportation",  
-    App
-    .name("transportationApp")
-    .rootPath("/apps/transportation")
-    .addRoute(Route("", HTTPMethod.GET, TRPIndexPageController))
-    .addRoute(Route("/", HTTPMethod.GET, TRPIndexPageController)));
+    App("transportationApp", "/apps/transportation")
+      .importTranslations()
+      .addRoutes(
+        Route("", HTTPMethod.GET, IndexPageController),
+        Route("/", HTTPMethod.GET, IndexPageController)
+      )
+    );
 }
