@@ -8,8 +8,8 @@ module apps.transportation.controllers.pages.index;
 import apps.transportation;
 @safe:
 
-class DTRPIndexPageController : DPageController {
-  mixin(ControllerThis!("TRPIndexPageController"));
+class DIndexPageController : DPageController {
+  mixin(ControllerThis!("IndexPageController"));
 
   override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
@@ -18,4 +18,4 @@ class DTRPIndexPageController : DPageController {
       .view(TRPIndexView(this));
   }
 }
-mixin(ControllerCalls!("TRPIndexPageController"));
+mixin(ControllerCalls!("IndexPageController"));
