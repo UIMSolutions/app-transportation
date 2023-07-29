@@ -14,12 +14,18 @@ public { // admin-transportation libraries
 }
 
 static this() {
-  AppRegistry.register("apps.transportation",  
-    App("transportationApp", "/apps/transportation")
-      .importTranslations()
-      .addRoutes(
-        Route("", HTTPMethod.GET, IndexPageController),
-        Route("/", HTTPMethod.GET, IndexPageController)
-      )
+  auto myApp = App("transportationApp", "apps/transportation");
+
+  with (myApp) {
+    importTranslations;
+    addControllers([
+      "trans.index": IndexPageController
+    ]);
+    addRoutes(
+      Route("", HTTPMethod.GET, controller("trans.index")),
+      Route("/", HTTPMethod.GET, controller("trans.index"))
     );
+  }
+
+  AppRegistry.register("apps.transportation", myApp);
 }
